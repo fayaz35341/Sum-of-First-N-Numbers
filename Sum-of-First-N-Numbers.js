@@ -1,10 +1,5 @@
 //executed but accuracy 66% 
 class Solution {
-    /**
-    * @param number n
-
-    * @returns number
-    */
     seriesSum(n) {
         // code here
         let count=0
@@ -18,11 +13,6 @@ class Solution {
 //second 
 
 class Solution {
-    /**
-    * @param number n
-
-    * @returns number
-    */
     seriesSum(n) {
         // code here
         return (n*(n+1))/2
@@ -30,3 +20,15 @@ class Solution {
 }
 
 console.log(new Solution().seriesSum(6))
+
+//3 accuracy 85%
+
+class Solution {
+    seriesSum(n) {
+        // code here
+        if(n===0){
+            return 0;
+        }
+        return n+this.seriesSum(n-1)
+    }
+}
